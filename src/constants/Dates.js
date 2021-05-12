@@ -1,4 +1,4 @@
-export const Weeks = [
+export const WeekDays = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -40,6 +40,9 @@ export const WeatherAppContents = [
   },
   {
     Date: 11
+  },
+  {
+    Date: 12
   }
 ];
 
