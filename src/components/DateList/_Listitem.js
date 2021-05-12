@@ -5,14 +5,13 @@ const Listitem = ({ CurDate, Selected, handleSelectedDayClick, index }) => {
   const today = new Date().getDate();
   return (
     // eslint-disable-next-line jsx-a11y/anchor-is-valid
-    <a
-      href="#"
+    <span
+      onClick={() => handleSelectedDayClick(index)}
       className={
         "ListItem list-group-item list-group-item-action" +
         (CurDate === today ? " list-group-item-success" : "") +
         (Selected ? " active" : "")
       }
-      aria-current="true"
     >
       <div className="d-flex w-100 justify-content-between">
         <h5 className="mb-1">May {CurDate}</h5>
@@ -27,7 +26,7 @@ const Listitem = ({ CurDate, Selected, handleSelectedDayClick, index }) => {
         }
       </p>
       <small>And some small print.</small>
-    </a>
+    </span>
   );
 };
 
